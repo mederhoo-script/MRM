@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Hero from '@/components/Hero';
+import HeroCarousel from '@/components/HeroCarousel';
 import TestimonialCard from '@/components/Testimonial';
 import { getSiteConfig, getCollections, getTestimonials } from '@/lib/content';
 
@@ -18,13 +18,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <Hero
-        title={site.tagline}
-        subtitle={site.intro}
-        ctaText="Book Consultation"
-        ctaHref="/contact"
-        image="/images/hero001.jpg"
-      />
+      <HeroCarousel />
 
       {/* Intro Statement */}
       <section className="bg-beige py-20 px-6 text-center">
