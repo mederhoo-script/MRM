@@ -59,6 +59,19 @@ const slides: Slide[] = [
     ],
   },
   {
+    bg: '/images/hero002a.jpeg',
+    tag: 'The Atelier',
+    title: 'Crafted With Intention',
+    subtitle: 'Every stitch tells a story of artistry and dedication',
+    ctaHref: '/about',
+    miniProducts: [
+      { image: '/images/look1.jpg', name: 'Evening Couture', category: 'Women' },
+      { image: '/images/look3.jpg', name: 'Power Dressing', category: 'Women' },
+      { image: '/images/look4.jpg', name: 'Heritage Collection', category: 'Heritage' },
+      { image: '/images/look6.jpg', name: 'Resort Luxe', category: 'Men' },
+    ],
+  },
+  {
     bg: '/images/hero003.png',
     tag: 'Bridal 2026',
     title: 'Your Perfect Day',
@@ -69,6 +82,19 @@ const slides: Slide[] = [
       { image: '/images/look1.jpg', name: 'Evening Couture', category: 'Women' },
       { image: '/images/look4.jpg', name: 'Heritage Collection', category: 'Heritage' },
       { image: '/images/look6.jpg', name: 'Resort Luxe', category: 'Men' },
+    ],
+  },
+  {
+    bg: '/images/hero004.jpg',
+    tag: 'Men\'s Collection',
+    title: 'Dressed to Inspire',
+    subtitle: 'Impeccably tailored menswear for the modern gentleman',
+    ctaHref: '/collections',
+    miniProducts: [
+      { image: '/images/look5.jpg', name: "Gentleman's Atelier", category: 'Men' },
+      { image: '/images/look6.jpg', name: 'Resort Luxe', category: 'Men' },
+      { image: '/images/look4.jpg', name: 'Heritage Collection', category: 'Heritage' },
+      { image: '/images/look3.jpg', name: 'Power Dressing', category: 'Women' },
     ],
   },
 ];
