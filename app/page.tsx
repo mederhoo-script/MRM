@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroCarousel from '@/components/HeroCarousel';
+import MarqueeStrip from '@/components/MarqueeStrip';
+import TrendingCarousel from '@/components/TrendingCarousel';
 import TestimonialCard from '@/components/Testimonial';
 import { getSiteConfig, getCollections, getTestimonials } from '@/lib/content';
 
@@ -19,6 +21,28 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <HeroCarousel />
+
+      {/* Marquee Strip */}
+      <MarqueeStrip />
+
+      {/* Trending Section */}
+      <section className="section-padding bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <p className="font-inter text-xs tracking-[0.4em] uppercase text-gold mb-2">Trending</p>
+              <h2 className="font-playfair text-3xl md:text-4xl text-brand-black">Shop The Latest Trends</h2>
+            </div>
+            <Link
+              href="/collections"
+              className="font-inter text-xs tracking-[0.2em] uppercase border border-brand-black text-brand-black px-5 py-3 hover:bg-brand-black hover:text-white transition-all duration-300 hidden sm:block"
+            >
+              View All
+            </Link>
+          </div>
+          <TrendingCarousel />
+        </div>
+      </section>
 
       {/* Intro Statement */}
       <section className="bg-beige py-20 px-6 text-center">
