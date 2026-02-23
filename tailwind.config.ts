@@ -26,6 +26,7 @@ const config: Config = {
         'slow-zoom': 'slowZoom 8s ease-out forwards',
         'hero-fade-up': 'heroFadeUp 0.6s ease-out both',
         'marquee': 'marquee 25s linear infinite',
+        'trending-scroll': 'marquee 35s linear infinite',
       },
       keyframes: {
         fadeIn: {

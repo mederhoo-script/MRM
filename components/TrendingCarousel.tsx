@@ -1,19 +1,19 @@
 'use client';
 
 /**
- * TrendingCarousel — Aurore-style editorial banner slider (Smileyque2 section 3).
+ * TrendingCarousel — Continuous auto-scrolling card strip.
  *
  * Layout:
- *   Mobile  : 1 banner visible, full-width
- *   Desktop : 2 banners visible side-by-side (50% each)
+ *   Mobile  : ~2.5 cards visible (each card = 40vw)
+ *   Desktop : ~4.5 cards visible (each card = 22vw)
  *
- * Interaction:
- *   • Touch swipe (live-drag follow, snap on release)
- *   • Prev / Next arrow buttons (desktop, shown only when applicable)
- *   • Thin progress scrollbar beneath the track
+ * Motion:
+ *   Pure CSS translateX animation — seamless infinite loop via duplicated items.
+ *   Pauses on hover (desktop) / touch (mobile).
+ *   Images use object-contain so the full photo is always visible.
  */
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -78,157 +78,75 @@ const BANNERS: Banner[] = [
   },
 ];
 
-const VISIBLE_DESKTOP = 2;
-const SWIPE_THRESHOLD = 40;
-const TOTAL = BANNERS.length;
+// Duplicate items so the CSS -50% translateX loop is seamless
+const LOOP_BANNERS = [...BANNERS, ...BANNERS];
 
 export default function TrendingCarousel() {
-  const [offset, setOffset] = useState(0);
-  const [dragDelta, setDragDelta] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
 
-  const isDragging = useRef(false);
-  const touchStartX = useRef(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const update = () => setIsMobile(window.innerWidth < 768);
-    update();
-    window.addEventListener('resize', update);
-    return () => window.removeEventListener('resize', update);
-  }, []);
-
-  // How many items are visible at once
-  const visibleCount = isMobile ? 1 : VISIBLE_DESKTOP;
-  const maxOffset = TOTAL - visibleCount;
-
-  // When mobile/desktop switches, clamp current offset so it stays valid
-  useEffect(() => {
-    setOffset(o => Math.min(o, maxOffset));
-  }, [maxOffset]);
-
-  const clamp = useCallback(
-    (v: number) => Math.max(0, Math.min(maxOffset, v)),
-    [maxOffset],
-  );
-
-  const go = useCallback(
-    (dir: 1 | -1) => {
-      setOffset(o => clamp(o + dir));
-      setDragDelta(0);
-    },
-    [clamp],
-  );
-
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-    isDragging.current = true;
+  // Pause animation on touch start, resume on touch end
+  const pauseAnim = () => {
+    if (trackRef.current) trackRef.current.style.animationPlayState = 'paused';
   };
-
-  const onTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging.current) return;
-    const dx = e.touches[0].clientX - touchStartX.current;
-    setDragDelta(dx);
+  const resumeAnim = () => {
+    if (trackRef.current) trackRef.current.style.animationPlayState = 'running';
   };
-
-  const onTouchEnd = (e: React.TouchEvent) => {
-    isDragging.current = false;
-    if (!e.changedTouches.length) return;
-    const dx = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(dx) > SWIPE_THRESHOLD) {
-      go(dx < 0 ? 1 : -1);
-    } else {
-      setDragDelta(0);
-    }
-  };
-
-  const slideWidthPct = 100 / visibleCount;
-  const translateX = `calc(${-offset * slideWidthPct}% + ${dragDelta}px)`;
-
-  const progressWidth = ((offset + visibleCount) / TOTAL) * 100;
 
   return (
-    <div>
-      {/* Track */}
+    /*
+     * Outer wrapper clips the overflowing track.
+     * Touch handlers pause/resume the CSS animation on mobile.
+     */
+    <div
+      className="overflow-hidden"
+      onTouchStart={pauseAnim}
+      onTouchEnd={resumeAnim}
+    >
+      {/*
+       * Track: flex row of 20 items (10 + 10 duplicated).
+       * animate-trending-scroll slides it left by -50% continuously.
+       * Hovering pauses the animation so users can inspect a card.
+       */}
       <div
-        ref={containerRef}
-        className="relative overflow-hidden"
-        style={{ touchAction: 'pan-y' }}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
+        ref={trackRef}
+        className="flex animate-trending-scroll hover:[animation-play-state:paused]"
       >
-        <div
-          className="flex"
-          style={{
-            transform: `translateX(${translateX})`,
-            transition: isDragging.current
-              ? 'none'
-              : 'transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-          }}
-        >
-          {BANNERS.map((b, i) => (
-            <Link
-              key={i}
-              href={b.href}
-              className="flex-shrink-0 relative overflow-hidden group block"
-              style={{ width: `${slideWidthPct}%` }}
-              draggable={false}
-            >
-              <div className="aspect-[3/4] relative overflow-hidden">
-                <Image
-                  src={b.image}
-                  alt={b.label}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  loading={i < 2 ? 'eager' : 'lazy'}
-                  draggable={false}
-                />
-              </div>
-              {/* Label overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5 md:p-7">
-                <p className="font-playfair text-xl font-semibold text-white tracking-wide">
-                  {b.label}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* Prev arrow */}
-        {offset > 0 && (
-          <button
-            onClick={() => go(-1)}
-            aria-label="Previous"
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 hidden md:flex items-center justify-center bg-white/90 border border-gray-200 hover:bg-gold hover:text-white hover:border-gold transition-all duration-200"
+        {LOOP_BANNERS.map((b, i) => (
+          <Link
+            key={i}
+            href={b.href}
+            /*
+             * Card width:
+             *   40vw mobile  → 100 / 40 = 2.5 cards visible
+             *   22vw desktop → 100 / 22 ≈ 4.5 cards visible
+             * px-1.5 gives a small gap between cards.
+             */
+            className="flex-shrink-0 w-[40vw] md:w-[22vw] px-1.5 block group"
+            draggable={false}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-          </button>
-        )}
-
-        {/* Next arrow */}
-        {offset < maxOffset && (
-          <button
-            onClick={() => go(1)}
-            aria-label="Next"
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 hidden md:flex items-center justify-center bg-white/90 border border-gray-200 hover:bg-gold hover:text-white hover:border-gold transition-all duration-200"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
-        )}
-      </div>
-
-      {/* Thin progress scrollbar (Aurore style) */}
-      <div className="h-[2px] bg-gray-200 mt-3 mx-1 relative">
-        <div
-          className="absolute top-0 left-0 h-full bg-brand-black transition-all duration-300"
-          style={{ width: `${Math.min(progressWidth, 100)}%` }}
-        />
+            {/* Fixed-height card so all cards are the same size */}
+            <div className="h-[220px] md:h-[300px] relative overflow-hidden bg-beige">
+              <Image
+                src={b.image}
+                alt={b.label}
+                fill
+                /*
+                 * object-contain ensures the entire image is always visible,
+                 * regardless of the image's own aspect ratio.
+                 * The beige background fills any letterbox space.
+                 */
+                className="object-contain"
+                sizes="(max-width: 768px) 40vw, 22vw"
+                loading={i < 5 ? 'eager' : 'lazy'}
+                draggable={false}
+              />
+            </div>
+            {/* Label below card */}
+            <p className="font-playfair text-sm font-semibold text-brand-black mt-2 truncate px-0.5">
+              {b.label}
+            </p>
+          </Link>
+        ))}
       </div>
     </div>
   );
