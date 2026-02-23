@@ -1,0 +1,63 @@
+{
+  "brandName": "MRM Fashion World",
+  "tagline": "Designed Exclusively For You",
+  "whatsapp": "2348000000000",
+  "intro": "We create bespoke garments tailored to your identity, merging Nigerian heritage with contemporary couture.",
+  "about": {
+    "headline": "The Art of Bespoke Tailoring",
+    "story": "At MRM Fashion World, every stitch tells a story. Founded on the belief that true elegance is personal, we craft garments that celebrate your individuality. Our atelier combines generations of tailoring mastery with a bold, contemporary vision — producing pieces that are not merely worn, but experienced.",
+    "philosophy": "We do not follow trends. We set them — one silhouette at a time.",
+    "values": [
+      {
+        "title": "Craftsmanship",
+        "description": "Every seam, every pleat, every button — executed with meticulous precision by hand."
+      },
+      {
+        "title": "Individuality",
+        "description": "No two clients are the same. No two garments should be either."
+      },
+      {
+        "title": "Heritage",
+        "description": "Rooted in Nigerian textile tradition, elevated for the global stage."
+      }
+    ]
+  },
+  "process": {
+    "headline": "The Bespoke Journey",
+    "subtitle": "From vision to reality — five steps toward your perfect garment.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Consultation",
+        "description": "We begin with an intimate conversation about your vision, occasion, and personal style. This is where your story becomes the blueprint."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "description": "Our designers sketch your silhouette, translating your desires into refined drawings that capture the essence of your garment."
+      },
+      {
+        "number": "03",
+        "title": "Fabric Selection",
+        "description": "We source the finest fabrics — from luxurious Italian wool to hand-woven Nigerian Aso-oke — chosen specifically for your piece."
+      },
+      {
+        "number": "04",
+        "title": "Fittings",
+        "description": "Through multiple fitting sessions, we sculpt the garment to your exact measurements, ensuring a silhouette that is uniquely yours."
+      },
+      {
+        "number": "05",
+        "title": "The Final Piece",
+        "description": "Your garment is completed with hand-finished details, pressed to perfection, and delivered ready to be worn as a statement of your identity."
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Begin Your Journey",
+    "subtitle": "Consultations are available by appointment only.",
+    "whatsappMessage": "Hello, I would like to book a consultation with MRM Fashion World.",
+    "email": "hello@mrmfashionworld.com",
+    "location": "Lagos, Nigeria"
+  }
+}
