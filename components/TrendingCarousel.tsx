@@ -83,8 +83,6 @@ const SWIPE_THRESHOLD = 40;
 const TOTAL = BANNERS.length;
 
 export default function TrendingCarousel() {
-  const maxOffset = TOTAL - VISIBLE_DESKTOP;
-
   const [offset, setOffset] = useState(0);
   const [dragDelta, setDragDelta] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -99,6 +97,15 @@ export default function TrendingCarousel() {
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
   }, []);
+
+  // How many items are visible at once
+  const visibleCount = isMobile ? 1 : VISIBLE_DESKTOP;
+  const maxOffset = TOTAL - visibleCount;
+
+  // When mobile/desktop switches, clamp current offset so it stays valid
+  useEffect(() => {
+    setOffset(o => Math.min(o, maxOffset));
+  }, [maxOffset]);
 
   const clamp = useCallback(
     (v: number) => Math.max(0, Math.min(maxOffset, v)),
@@ -135,11 +142,10 @@ export default function TrendingCarousel() {
     }
   };
 
-  const slideWidthPct = isMobile ? 100 : 100 / VISIBLE_DESKTOP;
+  const slideWidthPct = 100 / visibleCount;
   const translateX = `calc(${-offset * slideWidthPct}% + ${dragDelta}px)`;
 
-  const progressWidth =
-    ((offset + (isMobile ? 1 : VISIBLE_DESKTOP)) / TOTAL) * 100;
+  const progressWidth = ((offset + visibleCount) / TOTAL) * 100;
 
   return (
     <div>
@@ -165,10 +171,11 @@ export default function TrendingCarousel() {
             <Link
               key={i}
               href={b.href}
-              className="flex-shrink-0 w-full md:w-1/2 relative overflow-hidden group block"
+              className="flex-shrink-0 relative overflow-hidden group block"
+              style={{ width: `${slideWidthPct}%` }}
               draggable={false}
             >
-              <div className="aspect-[4/3] md:aspect-[3/2] relative overflow-hidden">
+              <div className="aspect-[3/4] relative overflow-hidden">
                 <Image
                   src={b.image}
                   alt={b.label}
@@ -180,7 +187,7 @@ export default function TrendingCarousel() {
                 />
               </div>
               {/* Label overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent flex items-end p-5 md:p-7">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5 md:p-7">
                 <p className="font-playfair text-xl font-semibold text-white tracking-wide">
                   {b.label}
                 </p>
@@ -220,7 +227,7 @@ export default function TrendingCarousel() {
       <div className="h-[2px] bg-gray-200 mt-3 mx-1 relative">
         <div
           className="absolute top-0 left-0 h-full bg-brand-black transition-all duration-300"
-          style={{ width: `${progressWidth}%` }}
+          style={{ width: `${Math.min(progressWidth, 100)}%` }}
         />
       </div>
     </div>
