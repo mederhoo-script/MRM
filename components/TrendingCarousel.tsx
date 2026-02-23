@@ -24,12 +24,58 @@ interface Banner {
 }
 
 const BANNERS: Banner[] = [
-  { image: '/images/look1.jpg', label: 'Evening Couture',     href: '/collections' },
-  { image: '/images/look2.jpg', label: 'Bridal Bespoke',      href: '/collections' },
-  { image: '/images/look3.jpg', label: 'Power Dressing',      href: '/collections' },
-  { image: '/images/look4.jpg', label: 'Heritage Collection', href: '/collections' },
-  { image: '/images/look5.jpg', label: "Gentleman's Atelier", href: '/collections' },
-  { image: '/images/look6.jpg', label: 'Resort Luxe',         href: '/collections' },
+  // ── 5 from Pins ────────────────────────────────────────────────────────────
+  {
+    image: '/images/Pins/00680064cb1472e22a0c6a4b49379dd5.jpg',
+    label: 'New Arrivals',
+    href: '/collections',
+  },
+  {
+    image: '/images/Pins/01ca6e31d85bd471e8080613d3d38162.jpg',
+    label: 'Heritage Style',
+    href: '/collections',
+  },
+  {
+    image: '/images/Pins/01ca9087f70cccc74a2f1b6be6f52980.jpg',
+    label: 'Bridal Couture',
+    href: '/collections',
+  },
+  {
+    image: '/images/Pins/025f0a0ad31ddd5b409c217a793e0fcf.jpg',
+    label: 'Power Dressing',
+    href: '/collections',
+  },
+  {
+    image: '/images/Pins/0263d811571dd5bccf6c48532ea89dc4.jpg',
+    label: 'Evening Wear',
+    href: '/collections',
+  },
+  // ── 5 from short gown ──────────────────────────────────────────────────────
+  {
+    image: '/images/short%20gown/22b44a7e1929d9b67e62772bc228429f.jpg',
+    label: 'Short Gown',
+    href: '/collections',
+  },
+  {
+    image: '/images/short%20gown/3103ef9862211497c26205bcc1ff370a.jpg',
+    label: 'Cocktail Dress',
+    href: '/collections',
+  },
+  {
+    image: '/images/short%20gown/36e21ac024649be6c62b4dc394e8b81c.jpg',
+    label: 'Party Wear',
+    href: '/collections',
+  },
+  {
+    image: '/images/short%20gown/564aea41cd94da5fab8b7f08fca1fa68.jpg',
+    label: 'Mini Collection',
+    href: '/collections',
+  },
+  {
+    image: '/images/short%20gown/70a5b47b0f982124fdfda58dd177b216.jpg',
+    label: 'Resort Style',
+    href: '/collections',
+  },
 ];
 
 const VISIBLE_DESKTOP = 2;
