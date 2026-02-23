@@ -9,6 +9,7 @@
  *
  * Hover behaviour:
  *   • Image scales up (zoom)
+ *   • "Quick View" eye button appears top-right
  *   • "Book This Look" button slides up from bottom
  *   • Category badge always visible top-left
  */
@@ -20,6 +21,7 @@ import type { Design } from '@/lib/content';
 
 interface DesignCardProps {
   design: Design;
+  onQuickView?: () => void;
 }
 
 const BADGE_STYLES: Record<string, string> = {
@@ -27,7 +29,7 @@ const BADGE_STYLES: Record<string, string> = {
   Trending: 'bg-gold text-brand-black',
 };
 
-export default function DesignCard({ design }: DesignCardProps) {
+export default function DesignCard({ design, onQuickView }: DesignCardProps) {
   const [imgError, setImgError] = useState(false);
 
   const badgeStyle = design.badge ? BADGE_STYLES[design.badge] ?? 'bg-charcoal text-white' : null;
@@ -62,6 +64,21 @@ export default function DesignCard({ design }: DesignCardProps) {
           </span>
         )}
 
+        {/* Quick View eye button — top right, appears on hover */}
+        {onQuickView && (
+          <button
+            onClick={e => { e.preventDefault(); onQuickView(); }}
+            aria-label={`Quick view ${design.title}`}
+            className="absolute top-3 right-3 z-10 w-9 h-9 flex items-center justify-center bg-white/90 border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-gold hover:text-white hover:border-gold"
+          >
+            {/* Eye icon */}
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </button>
+        )}
+
         {/* "Book This Look" overlay button — slides up on hover */}
         <div className="absolute bottom-0 left-0 right-0 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
           <Link
@@ -80,8 +97,11 @@ export default function DesignCard({ design }: DesignCardProps) {
           {design.category}
         </p>
 
-        {/* Title */}
-        <h3 className="font-playfair text-base font-medium text-brand-black leading-snug mb-3">
+        {/* Title — clicking also opens quick view */}
+        <h3
+          className="font-playfair text-base font-medium text-brand-black leading-snug mb-3 cursor-pointer hover:text-gold transition-colors duration-150"
+          onClick={onQuickView}
+        >
           {design.title}
         </h3>
 
@@ -110,3 +130,4 @@ export default function DesignCard({ design }: DesignCardProps) {
     </article>
   );
 }
+
