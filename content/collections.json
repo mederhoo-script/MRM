@@ -1,0 +1,44 @@
+[
+  {
+    "id": "evening-couture",
+    "title": "Evening Couture",
+    "image": "/images/look1.jpg",
+    "category": "Women",
+    "story": "Inspired by timeless silhouettes and hand-finished detailing, our Evening Couture collection transforms the night into a stage. Each gown is cut to flow with the body, draped in silk and adorned with carefully placed embellishments that catch the light."
+  },
+  {
+    "id": "bridal-bespoke",
+    "title": "Bridal Bespoke",
+    "image": "/images/look2.jpg",
+    "category": "Bridal",
+    "story": "Each bridal piece is sculpted uniquely for the wearer. We believe a wedding gown should feel like a second skin — an extension of your grace on the most significant day of your life. Every bride deserves a dress that tells her story."
+  },
+  {
+    "id": "power-dressing",
+    "title": "Power Dressing",
+    "image": "/images/look3.jpg",
+    "category": "Women",
+    "story": "For the woman who commands every room she enters. Our power dressing collection fuses structure with femininity — tailored suits, strong shoulders, and refined lines that speak before you say a word."
+  },
+  {
+    "id": "heritage-collection",
+    "title": "Heritage Collection",
+    "image": "/images/look4.jpg",
+    "category": "Heritage",
+    "story": "A celebration of Nigerian textile heritage reimagined for the contemporary world. Hand-woven Aso-oke meets modern silhouettes, creating pieces that honor the past while embracing the future."
+  },
+  {
+    "id": "gentlemens-atelier",
+    "title": "Gentleman's Atelier",
+    "image": "/images/look5.jpg",
+    "category": "Men",
+    "story": "The well-dressed man is never overdressed. Our menswear line offers impeccably tailored suits, agbadas, and casual luxury pieces — each constructed to the highest standard of bespoke craftsmanship."
+  },
+  {
+    "id": "resort-luxe",
+    "title": "Resort Luxe",
+    "image": "/images/look6.jpg",
+    "category": "Men",
+    "story": "Where effortless style meets resort sophistication. Lightweight fabrics, relaxed silhouettes, and refined detailing make these pieces perfect for the discerning traveller who refuses to compromise on elegance."
+  }
+]
