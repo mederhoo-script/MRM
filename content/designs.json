@@ -1,0 +1,82 @@
+[
+  {
+    "id": "d1",
+    "title": "Draped Evening Gown",
+    "category": "Women",
+    "badge": "New",
+    "image": "/images/Pins/0295dfedb581a6ec0ce1b7184d99ab84.jpg",
+    "withFabricPrice": "₦185,000",
+    "sewingOnlyPrice": "₦55,000",
+    "description": "Floor-length draped silhouette with a sweetheart neckline and ruffled skirt. Ideal for galas and high-end events."
+  },
+  {
+    "id": "d2",
+    "title": "Ankara Blazer Suit",
+    "category": "Women",
+    "badge": "Trending",
+    "image": "/images/Pins/039d2a843d51d0697fb42f7157968752.jpg",
+    "withFabricPrice": "₦120,000",
+    "sewingOnlyPrice": "₦42,000",
+    "description": "Structured Ankara blazer paired with wide-leg trousers. Power dressing meets heritage craft."
+  },
+  {
+    "id": "d3",
+    "title": "Bridal Lace Ball Gown",
+    "category": "Bridal",
+    "badge": "New",
+    "image": "/images/Pins/048ac20020b16b1edec64a77f1f2a3eb.jpg",
+    "withFabricPrice": "₦350,000",
+    "sewingOnlyPrice": "₦90,000",
+    "description": "Classic bridal ball gown in delicate French lace with cathedral train and hand-sewn beading."
+  },
+  {
+    "id": "d4",
+    "title": "Senator Agbada Set",
+    "category": "Men",
+    "badge": null,
+    "image": "/images/Pins/07046acf82d923aca56f97f14df6c9ef.jpg",
+    "withFabricPrice": "₦95,000",
+    "sewingOnlyPrice": "₦35,000",
+    "description": "Full three-piece agbada in premium aso-oke or damask. Embroidered accents on the chest and cuffs."
+  },
+  {
+    "id": "d5",
+    "title": "Mermaid Prom Gown",
+    "category": "Women",
+    "badge": "Trending",
+    "image": "/images/Pins/0755fe57fa2ed17c1ce920d80d4ef873.jpg",
+    "withFabricPrice": "₦155,000",
+    "sewingOnlyPrice": "₦48,000",
+    "description": "Body-hugging mermaid silhouette with a dramatic flared hem. Sequin or satin fabric available."
+  },
+  {
+    "id": "d6",
+    "title": "Cocktail Wrap Dress",
+    "category": "Women",
+    "badge": null,
+    "image": "/images/Pins/0831d63dee19f79cd8a36e9d8694e257.jpg",
+    "withFabricPrice": "₦88,000",
+    "sewingOnlyPrice": "₦28,000",
+    "description": "Elegant wrap-style cocktail dress with V-neckline and flutter sleeves. Perfect for dinner events."
+  },
+  {
+    "id": "d7",
+    "title": "Kaftan Two-Piece",
+    "category": "Heritage",
+    "badge": "New",
+    "image": "/images/Pins/0b25345b1c824f980c54f8731227a75b.jpg",
+    "withFabricPrice": "₦75,000",
+    "sewingOnlyPrice": "₦25,000",
+    "description": "Relaxed flowing kaftan blouse with matching wide-leg trousers in printed cotton or chiffon."
+  },
+  {
+    "id": "d8",
+    "title": "Corset Ball Gown",
+    "category": "Women",
+    "badge": "New",
+    "image": "/images/Pins/0bee97bb40e8c82fa2a605bc4ff69b09.jpg",
+    "withFabricPrice": "₦220,000",
+    "sewingOnlyPrice": "₦68,000",
+    "description": "Structured corset bodice with a voluminous ball gown skirt. Statement piece for weddings and formal events."
+  }
+]

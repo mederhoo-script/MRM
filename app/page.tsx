@@ -4,8 +4,9 @@ import Link from 'next/link';
 import HeroCarousel from '@/components/HeroCarousel';
 import MarqueeStrip from '@/components/MarqueeStrip';
 import TrendingCarousel from '@/components/TrendingCarousel';
+import DesignCard from '@/components/DesignCard';
 import TestimonialCard from '@/components/Testimonial';
-import { getSiteConfig, getCollections, getTestimonials } from '@/lib/content';
+import { getSiteConfig, getCollections, getTestimonials, getDesigns } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'MRM Fashion World | Designed Exclusively For You',
@@ -16,6 +17,7 @@ export default function HomePage() {
   const site = getSiteConfig();
   const collections = getCollections().slice(0, 3);
   const testimonials = getTestimonials();
+  const designs = getDesigns();
 
   return (
     <>
@@ -41,6 +43,46 @@ export default function HomePage() {
             </Link>
           </div>
           <TrendingCarousel />
+        </div>
+      </section>
+
+      {/* Our Designs — Product Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section header */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
+            <div>
+              <p className="font-inter text-xs tracking-[0.4em] uppercase text-gold mb-2">Our Designs</p>
+              <h2 className="font-playfair text-3xl md:text-4xl text-brand-black">Choose Your Service</h2>
+              <div className="gold-divider !mx-0 !my-4" />
+            </div>
+            <Link
+              href="/collections"
+              className="font-inter text-xs tracking-[0.2em] uppercase border border-brand-black text-brand-black px-5 py-3 hover:bg-brand-black hover:text-white transition-all duration-300 self-start sm:self-end"
+            >
+              View All
+            </Link>
+          </div>
+
+          {/* Pricing legend */}
+          <div className="flex flex-wrap gap-6 mb-8 p-4 bg-beige">
+            <div className="flex items-center gap-2">
+              <span className="font-inter text-xs font-semibold text-brand-black">With Fabric:</span>
+              <span className="font-inter text-xs text-charcoal/70">Designer purchases & sews the fabric for you</span>
+            </div>
+            <div className="w-px bg-gold/30 hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <span className="font-inter text-xs font-semibold text-gold">Sewing Only:</span>
+              <span className="font-inter text-xs text-charcoal/70">You supply the fabric, we handle the craft</span>
+            </div>
+          </div>
+
+          {/* Design grid — 2 cols mobile, 3 tablet, 4 desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {designs.map((design) => (
+              <DesignCard key={design.id} design={design} />
+            ))}
+          </div>
         </div>
       </section>
 
