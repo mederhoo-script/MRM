@@ -16,7 +16,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import type { Design } from '@/lib/content';
 
 interface DesignCardProps {
@@ -78,16 +77,6 @@ export default function DesignCard({ design, onQuickView }: DesignCardProps) {
             </svg>
           </button>
         )}
-
-        {/* "Book This Look" overlay button — slides up on hover */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <Link
-            href={`/contact?design=${design.id}`}
-            className="block w-full text-center font-inter text-[10px] tracking-[0.25em] uppercase bg-white/95 text-brand-black py-3 hover:bg-gold hover:text-white transition-colors duration-200"
-          >
-            Book This Look
-          </Link>
-        </div>
       </div>
 
       {/* ── CARD INFO ──────────────────────────────────────────────────────── */}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WhatsAppFAB from '@/components/WhatsAppFAB';
 import { getSiteConfig } from '@/lib/content';
 
 const site = getSiteConfig();
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Navbar />
         <main>{children}</main>
+        <WhatsAppFAB />
         <Footer />
       </body>
     </html>
