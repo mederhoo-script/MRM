@@ -4,7 +4,7 @@ import Link from 'next/link';
 import HeroCarousel from '@/components/HeroCarousel';
 import MarqueeStrip from '@/components/MarqueeStrip';
 import TrendingCarousel from '@/components/TrendingCarousel';
-import DesignCard from '@/components/DesignCard';
+import DesignsSection from '@/components/DesignsSection';
 import TestimonialCard from '@/components/Testimonial';
 import { getSiteConfig, getCollections, getTestimonials, getDesigns } from '@/lib/content';
 
@@ -77,12 +77,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Design grid — 2 cols mobile, 3 tablet, 4 desktop */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {designs.map((design) => (
-              <DesignCard key={design.id} design={design} />
-            ))}
-          </div>
+          {/* Design grid with Quick View — handled by client component */}
+          <DesignsSection designs={designs} />
         </div>
       </section>
 
