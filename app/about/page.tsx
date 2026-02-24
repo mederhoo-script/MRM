@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/look4.jpg"
+                src="/images/short%20gown/36e21ac024649be6c62b4dc394e8b81c.jpg"
                 alt="Craftsmanship"
                 fill
                 className="object-cover"
