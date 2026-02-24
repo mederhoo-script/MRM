@@ -43,8 +43,9 @@ const TAB_CONTENT: Record<Tab, string> = {
 };
 
 const BADGE_STYLES: Record<string, string> = {
-  New: 'bg-brand-black text-white',
+  New:      'bg-brand-black text-white',
   Trending: 'bg-gold text-brand-black',
+  Sale:     'bg-red-600 text-white',
 };
 
 const WA_NUMBER = '2348034295030';
@@ -83,7 +84,9 @@ export default function DesignQuickView({ design, allDesigns, onClose, onNavigat
 
   if (!design) return null;
 
-  const badgeStyle = design.badge ? BADGE_STYLES[design.badge] ?? 'bg-charcoal text-white' : null;
+  const hasDiscount = !!(design.withFabricOriginalPrice || design.sewingOnlyOriginalPrice);
+  const badge = hasDiscount ? 'Sale' : (design.badge ?? null);
+  const badgeStyle = badge ? BADGE_STYLES[badge] ?? 'bg-charcoal text-white' : null;
 
   // Related: same category, excluding current, max 8
   const related = allDesigns
@@ -147,7 +150,7 @@ export default function DesignQuickView({ design, allDesigns, onClose, onNavigat
             />
             {badgeStyle && (
               <span className={`absolute top-3 left-3 z-10 font-inter text-[9px] tracking-[0.15em] uppercase px-2 py-0.5 ${badgeStyle}`}>
-                {design.badge}
+                {badge}
               </span>
             )}
           </div>
@@ -208,8 +211,15 @@ export default function DesignQuickView({ design, allDesigns, onClose, onNavigat
                     MRM Fashion World sources premium fabric &amp; handles everything — cutting, sewing &amp; finishing.
                   </p>
                 </div>
-                <span className="font-playfair text-lg font-semibold text-brand-black flex-shrink-0">
-                  {design.withFabricPrice}
+                <span className="flex flex-col items-end flex-shrink-0">
+                  {design.withFabricOriginalPrice && (
+                    <span className="font-inter text-xs text-charcoal/40 line-through">
+                      {design.withFabricOriginalPrice}
+                    </span>
+                  )}
+                  <span className={`font-playfair text-lg font-semibold ${design.withFabricOriginalPrice ? 'text-red-600' : 'text-brand-black'}`}>
+                    {design.withFabricPrice}
+                  </span>
                 </span>
               </label>
 
@@ -241,8 +251,15 @@ export default function DesignQuickView({ design, allDesigns, onClose, onNavigat
                     You supply your own fabric. We handle the expert cutting, tailoring &amp; finishing.
                   </p>
                 </div>
-                <span className="font-playfair text-lg font-semibold text-gold flex-shrink-0">
-                  {design.sewingOnlyPrice}
+                <span className="flex flex-col items-end flex-shrink-0">
+                  {design.sewingOnlyOriginalPrice && (
+                    <span className="font-inter text-xs text-charcoal/40 line-through">
+                      {design.sewingOnlyOriginalPrice}
+                    </span>
+                  )}
+                  <span className={`font-playfair text-lg font-semibold ${design.sewingOnlyOriginalPrice ? 'text-red-600' : 'text-gold'}`}>
+                    {design.sewingOnlyPrice}
+                  </span>
                 </span>
               </label>
             </div>
@@ -265,8 +282,22 @@ export default function DesignQuickView({ design, allDesigns, onClose, onNavigat
             <span className="font-inter text-xs text-charcoal/60 uppercase tracking-wide">
               {service === 'with-fabric' ? 'Total (fabric + sewing)' : 'Sewing service fee'}
             </span>
-            <span className={`font-playfair text-2xl font-bold ${service === 'with-fabric' ? 'text-brand-black' : 'text-gold'}`}>
-              {selectedPrice}
+            <span className="flex items-baseline gap-2">
+              {service === 'with-fabric' && design.withFabricOriginalPrice && (
+                <span className="font-inter text-sm text-charcoal/40 line-through">
+                  {design.withFabricOriginalPrice}
+                </span>
+              )}
+              {service === 'sewing-only' && design.sewingOnlyOriginalPrice && (
+                <span className="font-inter text-sm text-charcoal/40 line-through">
+                  {design.sewingOnlyOriginalPrice}
+                </span>
+              )}
+              <span className={`font-playfair text-2xl font-bold ${
+                hasDiscount ? 'text-red-600' : (service === 'with-fabric' ? 'text-brand-black' : 'text-gold')
+              }`}>
+                {selectedPrice}
+              </span>
             </span>
           </div>
 

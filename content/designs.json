@@ -93,11 +93,13 @@
     "id": "p10",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/07046acf82d923aca56f97f14df6c9ef.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦300,000",
+    "sewingOnlyOriginalPrice": "₦90,000"
   },
   {
     "id": "p11",
@@ -193,11 +195,13 @@
     "id": "p20",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/0cb39cee072a525f7931c2d3efba404f.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦188,000",
+    "sewingOnlyOriginalPrice": "₦52,000"
   },
   {
     "id": "p21",
@@ -293,11 +297,13 @@
     "id": "p30",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/122fa9f1ce571ee881a8e8a6901ece69.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦117,000",
+    "sewingOnlyOriginalPrice": "₦39,000"
   },
   {
     "id": "p31",
@@ -393,11 +399,13 @@
     "id": "p40",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/156c7863dbbb9323d4a7deb6ca8f73d4.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦338,000",
+    "sewingOnlyOriginalPrice": "₦101,000"
   },
   {
     "id": "p41",
@@ -493,11 +501,13 @@
     "id": "p50",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/1e657e5a3bcec161ff43f8abcd67421d.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦210,000",
+    "sewingOnlyOriginalPrice": "₦59,000"
   },
   {
     "id": "p51",
@@ -593,11 +603,13 @@
     "id": "p60",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/2352d8145b0b7a2cb2a095137927adf3.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦108,000",
+    "sewingOnlyOriginalPrice": "₦36,000"
   },
   {
     "id": "p61",
@@ -693,11 +705,13 @@
     "id": "p70",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/292d608e51dacba32df5659cbb71e9b8.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦312,000",
+    "sewingOnlyOriginalPrice": "₦94,000"
   },
   {
     "id": "p71",
@@ -793,11 +807,13 @@
     "id": "p80",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/33a6f33753e2789bd5539d2f93a036b8.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦195,000",
+    "sewingOnlyOriginalPrice": "₦55,000"
   },
   {
     "id": "p81",
@@ -893,11 +909,13 @@
     "id": "p90",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/39ebc550607adc3f07be82b94f2f7589.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦122,000",
+    "sewingOnlyOriginalPrice": "₦40,000"
   },
   {
     "id": "p91",
@@ -993,11 +1011,13 @@
     "id": "p100",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/46dd64f3ac43c90817fc14e89a012ed7.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦350,000",
+    "sewingOnlyOriginalPrice": "₦105,000"
   },
   {
     "id": "p101",
@@ -1093,11 +1113,13 @@
     "id": "p110",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/4ca88704-a748-4ed5-9e36-cd4fa64dd556.jpeg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦180,000",
+    "sewingOnlyOriginalPrice": "₦50,000"
   },
   {
     "id": "p111",
@@ -1193,11 +1215,13 @@
     "id": "p120",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/53b2ed0b-8f4d-46f1-80b3-cadca2f6d95b.jpeg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦112,000",
+    "sewingOnlyOriginalPrice": "₦38,000"
   },
   {
     "id": "p121",
@@ -1293,11 +1317,13 @@
     "id": "p130",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/5ccf0676cb6bfddad5961f3ef6cc1e24.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦325,000",
+    "sewingOnlyOriginalPrice": "₦98,000"
   },
   {
     "id": "p131",
@@ -1393,11 +1419,13 @@
     "id": "p140",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/630de0af7818d7013575eaf8a9a2797f.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦202,000",
+    "sewingOnlyOriginalPrice": "₦57,000"
   },
   {
     "id": "p141",
@@ -1493,11 +1521,13 @@
     "id": "p150",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/6b22e529304085c48bb6e1c667fb277a.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦126,000",
+    "sewingOnlyOriginalPrice": "₦42,000"
   },
   {
     "id": "p151",
@@ -1593,11 +1623,13 @@
     "id": "p160",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/72563d0ed6dd6971fcd7f5e1dc9677e4.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦300,000",
+    "sewingOnlyOriginalPrice": "₦90,000"
   },
   {
     "id": "p161",
@@ -1693,11 +1725,13 @@
     "id": "p170",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/7cf2965b384ed6bb98fa86fd3c60071e.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦188,000",
+    "sewingOnlyOriginalPrice": "₦52,000"
   },
   {
     "id": "p171",
@@ -1793,11 +1827,13 @@
     "id": "p180",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/85b03f3f88087378670fc66bd8ddde66.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦117,000",
+    "sewingOnlyOriginalPrice": "₦39,000"
   },
   {
     "id": "p181",
@@ -1893,11 +1929,13 @@
     "id": "p190",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/8b955c528aa9e172fdef9c7ac0213609.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦338,000",
+    "sewingOnlyOriginalPrice": "₦101,000"
   },
   {
     "id": "p191",
@@ -1993,11 +2031,13 @@
     "id": "p200",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/8f13c9d8d648a5ea8b4662b7b23e175f.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦210,000",
+    "sewingOnlyOriginalPrice": "₦59,000"
   },
   {
     "id": "p201",
@@ -2093,11 +2133,13 @@
     "id": "p210",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/967b2689847806ef2d2a7b533358e982.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦108,000",
+    "sewingOnlyOriginalPrice": "₦36,000"
   },
   {
     "id": "p211",
@@ -2193,11 +2235,13 @@
     "id": "p220",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/9d0c6b592dced5df3035bb03888ef2e9.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦312,000",
+    "sewingOnlyOriginalPrice": "₦94,000"
   },
   {
     "id": "p221",
@@ -2293,11 +2337,13 @@
     "id": "p230",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/aad76786dcd23b4a3f3d556b423f579f.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦195,000",
+    "sewingOnlyOriginalPrice": "₦55,000"
   },
   {
     "id": "p231",
@@ -2393,11 +2439,13 @@
     "id": "p240",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/b64ed91aa7d6d1998d3ca810408a8424.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦122,000",
+    "sewingOnlyOriginalPrice": "₦40,000"
   },
   {
     "id": "p241",
@@ -2493,11 +2541,13 @@
     "id": "p250",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/c2eca0b9-7c9e-46dc-b7c5-5e22da4b61d4.jpeg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦350,000",
+    "sewingOnlyOriginalPrice": "₦105,000"
   },
   {
     "id": "p251",
@@ -2593,11 +2643,13 @@
     "id": "p260",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/cac8845c21d3219360091a39525673a5.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦180,000",
+    "sewingOnlyOriginalPrice": "₦50,000"
   },
   {
     "id": "p261",
@@ -2693,11 +2745,13 @@
     "id": "p270",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/d22153348903961a164d32ef189a351c.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦112,000",
+    "sewingOnlyOriginalPrice": "₦38,000"
   },
   {
     "id": "p271",
@@ -2793,11 +2847,13 @@
     "id": "p280",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/d8595a0c4e80cb821ad1733d50f3d692.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦325,000",
+    "sewingOnlyOriginalPrice": "₦98,000"
   },
   {
     "id": "p281",
@@ -2893,11 +2949,13 @@
     "id": "p290",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/defb23aec77e93387f1db76856a74a0b.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦202,000",
+    "sewingOnlyOriginalPrice": "₦57,000"
   },
   {
     "id": "p291",
@@ -2993,11 +3051,13 @@
     "id": "p300",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/e6ac57c18b2df66ffe1c45a25f51c409.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦126,000",
+    "sewingOnlyOriginalPrice": "₦42,000"
   },
   {
     "id": "p301",
@@ -3093,11 +3153,13 @@
     "id": "p310",
     "title": "Denim Co-ord Set",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/f394f10a0c3631ffe37ea59e8247643b.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦300,000",
+    "sewingOnlyOriginalPrice": "₦90,000"
   },
   {
     "id": "p311",
@@ -3193,11 +3255,13 @@
     "id": "p320",
     "title": "Ruched Midi Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/f98a3b35a4fb816721aa8861a733abbf.jpg",
     "withFabricPrice": "₦150,000",
     "sewingOnlyPrice": "₦42,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦188,000",
+    "sewingOnlyOriginalPrice": "₦52,000"
   },
   {
     "id": "p321",
@@ -3293,11 +3357,13 @@
     "id": "p330",
     "title": "Peplum Party Dress",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/Pins/longgreen_back.jpg",
     "withFabricPrice": "₦90,000",
     "sewingOnlyPrice": "₦30,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦117,000",
+    "sewingOnlyOriginalPrice": "₦39,000"
   },
   {
     "id": "p331",
@@ -3393,11 +3459,13 @@
     "id": "g9",
     "title": "Heritage Agbada",
     "category": "Women",
-    "badge": null,
+    "badge": "Sale",
     "image": "/images/short%20gown/993361604e245f6134eabfa7d45ba836.jpg",
     "withFabricPrice": "₦250,000",
     "sewingOnlyPrice": "₦75,000",
-    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions."
+    "description": "Flirty peplum top with tailored skirt. Versatile enough for day or evening occasions.",
+    "withFabricOriginalPrice": "₦338,000",
+    "sewingOnlyOriginalPrice": "₦101,000"
   },
   {
     "id": "g10",
