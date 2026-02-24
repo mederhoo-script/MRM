@@ -56,12 +56,12 @@ export default function LookCard({ collection, index }: LookCardProps) {
             transition={{ duration: 0.3 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-[16/9] overflow-hidden">
+            <div className="relative aspect-[3/4] overflow-hidden bg-beige">
               <Image
                 src={collection.image}
                 alt={collection.title}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 672px"
               />
             </div>

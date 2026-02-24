@@ -40,5 +40,26 @@
     "image": "/images/short%20gown/22b44a7e1929d9b67e62772bc228429f.jpg",
     "category": "Women",
     "story": "Where effortless style meets resort sophistication. Lightweight fabrics, relaxed silhouettes, and refined detailing make these pieces perfect for the discerning traveller who refuses to compromise on elegance."
+  },
+  {
+    "id": "ankara-edit",
+    "title": "Ankara Edit",
+    "image": "/images/Pins/0295dfedb581a6ec0ce1b7184d99ab84.jpg",
+    "category": "Heritage",
+    "story": "Bold prints, structured cuts, and undeniable confidence. The Ankara Edit channels the vibrancy of West African textile traditions into ready-to-wear silhouettes that turn heads at every occasion."
+  },
+  {
+    "id": "cocktail-hour",
+    "title": "Cocktail Hour",
+    "image": "/images/Pins/0831d63dee19f79cd8a36e9d8694e257.jpg",
+    "category": "Women",
+    "story": "Cocktail dressing redefined. Each piece in this collection is designed to take you from the reception to the dance floor without missing a beat — polished, spirited, and entirely your own."
+  },
+  {
+    "id": "short-gown-luxe",
+    "title": "Short Gown Luxe",
+    "image": "/images/short%20gown/3103ef9862211497c26205bcc1ff370a.jpg",
+    "category": "Women",
+    "story": "Effortlessly chic short gowns crafted for the modern woman who values both style and comfort. Each piece features exquisite detailing that elevates the everyday into the extraordinary."
   }
 ]
