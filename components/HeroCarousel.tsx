@@ -1,11 +1,10 @@
 'use client';
 
 /**
- * HeroCarousel — Sliding split-screen hero
+ * HeroCarousel — Sliding full-screen hero
  *
- * Left panel (65% desktop, full-width mobile): image slides move horizontally
- * via CSS transform translateX — both on auto-play and live touch drag.
- * Right panel (35%, desktop only): mini product cards from featured collections.
+ * Full-width image slides move horizontally via CSS transform translateX —
+ * both on auto-play and live touch drag.
  *
  * Touch behaviour:
  *   onTouchMove → slides follow the finger in real-time
@@ -16,19 +15,12 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface MiniProduct {
-  image: string;
-  name: string;
-  category: string;
-}
-
 interface Slide {
   bg: string;
   tag: string;
   title: string;
   subtitle: string;
   ctaHref: string;
-  miniProducts: MiniProduct[];
 }
 
 const slides: Slide[] = [
@@ -38,12 +30,6 @@ const slides: Slide[] = [
     title: 'Wear Your Story',
     subtitle: 'Bespoke luxury fashion crafted for extraordinary moments',
     ctaHref: '/collections',
-    miniProducts: [
-      { image: '/images/Pins/00680064cb1472e22a0c6a4b49379dd5.jpg', name: 'New Arrivals', category: 'Women' },
-      { image: '/images/Pins/01ca9087f70cccc74a2f1b6be6f52980.jpg', name: 'Bridal Couture', category: 'Bridal' },
-      { image: '/images/short%20gown/22b44a7e1929d9b67e62772bc228429f.jpg', name: 'Short Gown', category: 'Women' },
-      { image: '/images/short%20gown/70a5b47b0f982124fdfda58dd177b216.jpg', name: 'Resort Style', category: 'Women' },
-    ],
   },
   {
     bg: '/images/hero002.jpeg',
@@ -51,12 +37,6 @@ const slides: Slide[] = [
     title: 'Heritage Elegance',
     subtitle: 'Dramatic silhouettes that command every room you enter',
     ctaHref: '/collections',
-    miniProducts: [
-      { image: '/images/Pins/025f0a0ad31ddd5b409c217a793e0fcf.jpg', name: 'Power Dressing', category: 'Women' },
-      { image: '/images/Pins/0263d811571dd5bccf6c48532ea89dc4.jpg', name: 'Evening Wear', category: 'Women' },
-      { image: '/images/Pins/00680064cb1472e22a0c6a4b49379dd5.jpg', name: 'New Arrivals', category: 'Women' },
-      { image: '/images/short%20gown/3103ef9862211497c26205bcc1ff370a.jpg', name: 'Cocktail Dress', category: 'Women' },
-    ],
   },
   {
     bg: '/images/hero002a.jpeg',
@@ -64,12 +44,6 @@ const slides: Slide[] = [
     title: 'Crafted With Intention',
     subtitle: 'Every stitch tells a story of artistry and dedication',
     ctaHref: '/about',
-    miniProducts: [
-      { image: '/images/Pins/00680064cb1472e22a0c6a4b49379dd5.jpg', name: 'New Arrivals', category: 'Women' },
-      { image: '/images/Pins/025f0a0ad31ddd5b409c217a793e0fcf.jpg', name: 'Power Dressing', category: 'Women' },
-      { image: '/images/short%20gown/36e21ac024649be6c62b4dc394e8b81c.jpg', name: 'Party Wear', category: 'Women' },
-      { image: '/images/short%20gown/564aea41cd94da5fab8b7f08fca1fa68.jpg', name: 'Mini Collection', category: 'Women' },
-    ],
   },
   {
     bg: '/images/hero003.png',
@@ -77,12 +51,6 @@ const slides: Slide[] = [
     title: 'Your Perfect Day',
     subtitle: 'Fully bespoke bridal creations tailored to your vision',
     ctaHref: '/contact',
-    miniProducts: [
-      { image: '/images/Pins/01ca9087f70cccc74a2f1b6be6f52980.jpg', name: 'Bridal Couture', category: 'Bridal' },
-      { image: '/images/Pins/00680064cb1472e22a0c6a4b49379dd5.jpg', name: 'New Arrivals', category: 'Women' },
-      { image: '/images/Pins/0263d811571dd5bccf6c48532ea89dc4.jpg', name: 'Evening Wear', category: 'Women' },
-      { image: '/images/short%20gown/70a5b47b0f982124fdfda58dd177b216.jpg', name: 'Resort Style', category: 'Women' },
-    ],
   },
   {
     bg: '/images/hero004.jpg',
@@ -90,12 +58,6 @@ const slides: Slide[] = [
     title: 'Dressed to Inspire',
     subtitle: 'Impeccably tailored menswear for the modern gentleman',
     ctaHref: '/collections',
-    miniProducts: [
-      { image: '/images/Pins/01ca6e31d85bd471e8080613d3d38162.jpg', name: 'Heritage Style', category: 'Men' },
-      { image: '/images/short%20gown/70a5b47b0f982124fdfda58dd177b216.jpg', name: 'Resort Style', category: 'Women' },
-      { image: '/images/Pins/0263d811571dd5bccf6c48532ea89dc4.jpg', name: 'Evening Wear', category: 'Women' },
-      { image: '/images/Pins/025f0a0ad31ddd5b409c217a793e0fcf.jpg', name: 'Power Dressing', category: 'Women' },
-    ],
   },
 ];
 
@@ -210,10 +172,10 @@ export default function HeroCarousel() {
       onMouseEnter={stopAuto}
       onMouseLeave={startAuto}
     >
-      {/* LEFT PANEL — full width mobile / 65% desktop */}
+      {/* LEFT PANEL — full width */}
       <div
         ref={containerRef}
-        className="relative w-full md:w-[65%] h-full overflow-hidden"
+        className="relative w-full h-full overflow-hidden"
         style={{ touchAction: 'pan-y' }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -243,7 +205,7 @@ export default function HeroCarousel() {
                 fill
                 className="object-cover object-center"
                 priority={i === 0}
-                sizes="(max-width: 768px) 100vw, 65vw"
+                sizes="100vw"
                 draggable={false}
               />
               <div className="absolute inset-0 bg-black/50" />
@@ -331,50 +293,6 @@ export default function HeroCarousel() {
             className="h-full bg-gold"
             style={{ animation: `hero-progress ${AUTOPLAY_MS}ms linear forwards` }}
           />
-        </div>
-      </div>
-
-      {/* RIGHT PANEL — 35%, desktop only */}
-      <div className="hidden md:flex md:w-[35%] h-full bg-white flex-col border-l border-gray-100">
-        <div className="flex-1 flex flex-col divide-y divide-gray-100 overflow-hidden">
-          {slide.miniProducts.map((p, i) => (
-            <Link
-              key={`${current}-${i}`}
-              href="/collections"
-              className="flex items-center gap-3 px-5 py-4 hover:bg-beige transition-colors duration-200 group flex-1"
-            >
-              <div className="w-14 h-[72px] flex-shrink-0 overflow-hidden bg-beige relative">
-                <Image
-                  src={p.image}
-                  alt={p.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="56px"
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-playfair text-[13px] font-medium text-brand-black leading-snug line-clamp-2">
-                  {p.name}
-                </p>
-                <p className="font-inter text-xs text-gold mt-1 tracking-widest uppercase">
-                  {p.category}
-                </p>
-              </div>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-300 flex-shrink-0 group-hover:text-gold transition-colors duration-200">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </Link>
-          ))}
-        </div>
-
-        {/* View All footer */}
-        <div className="px-5 py-4 border-t border-gray-100 flex-shrink-0">
-          <Link
-            href="/collections"
-            className="block text-center font-inter text-[10px] tracking-[0.3em] uppercase border border-brand-black text-brand-black py-3 hover:bg-brand-black hover:text-white transition-all duration-300"
-          >
-            View All Collections
-          </Link>
         </div>
       </div>
     </section>
